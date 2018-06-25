@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PartController">
+<children>
+    <Label layoutX="300.0" layoutY="10.0" text="Tabela Części">
+        <font>
+            <Font name="System Bold" size="25.0" />
+        </font></Label>
+    <Label layoutX="45.0" layoutY="55.0" prefHeight="17.0" prefWidth="41.0" text="Nazwa" />
+    <TableView fx:id="partsTable" layoutX="28.0" layoutY="171.0" onMouseClicked="#setPartIdTextFromTable" prefHeight="316.0" prefWidth="674.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="nazwaColumn" prefWidth="96.0" text="Nazwa" />
+            <TableColumn fx:id="kosztColumn" prefWidth="65.0" text="Koszt[zł]" />
+            <TableColumn fx:id="czasnaprawyColumn" prefWidth="68.0" text="Czas[h]" />
+            <TableColumn fx:id="sposobnaprawyColumn" prefWidth="398.0" text="Sposób" />
+        </columns>
+    </TableView>
+    <Label layoutX="41.0" layoutY="84.0" prefHeight="17.0" prefWidth="49.0" text="Koszt[zł]" />
+    <Label layoutX="41.0" layoutY="112.0" text="Czas[h]" />
+    <Label layoutX="41.0" layoutY="138.0" text="Sposób" />
+    <TextField fx:id="nazwafield" layoutX="99.0" layoutY="51.0" prefHeight="25.0" prefWidth="394.0" />
+    <TextField fx:id="kosztfield" layoutX="99.0" layoutY="80.0" prefHeight="25.0" prefWidth="394.0" />
+    <TextField fx:id="czasfield" layoutX="99.0" layoutY="108.0" prefHeight="25.0" prefWidth="394.0" />
+    <TextField fx:id="sposobfield" layoutX="99.0" layoutY="136.0" prefHeight="25.0" prefWidth="394.0" />
+    <Button fx:id="dodajbutton" layoutX="500.0" layoutY="51.0" mnemonicParsing="false" onAction="#insertPart" prefHeight="25.0" prefWidth="190.0" text="Dodaj" />
+    <Button fx:id="zmienbutton" layoutX="500.0" layoutY="80.0" mnemonicParsing="false" onAction="#updatePart" prefHeight="25.0" prefWidth="190.0" text="Zmień" />
+    <Button fx:id="usunbutton" layoutX="500.0" layoutY="108.0" mnemonicParsing="false" onAction="#deletePart" prefHeight="25.0" prefWidth="190.0" text="Usuń" />
+</children>
+</Pane>
